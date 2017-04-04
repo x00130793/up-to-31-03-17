@@ -18,3 +18,6 @@ run
 git push
 git commit
 git init
+run
+h2-browser
+run

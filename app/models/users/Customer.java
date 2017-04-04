@@ -18,7 +18,8 @@ public class Customer extends User{
 	private String street2;
     private String town;
     private String postCode;
-    private String creditCard;
+    
+	private String country;
     
 
     @OneToOne(mappedBy = "customer", cascade = CascadeType.ALL)
@@ -27,14 +28,14 @@ public class Customer extends User{
     @OneToMany(mappedBy="customer", cascade = CascadeType.ALL)
     private List<ShopOrder> orders;
 
-	public Customer(String email, String role, String fName, String lName, String password, String password2, String street1, String street2, String town, String postCode, String creditCard)
+	public Customer(String email, String role, String fName, String lName, String password, String password2, String street1, String street2, String town, String postCode, String country)
 	{
 		super(email, role, fName, lName, password, password2);
         this.street1 = street1;
         this.street2 = street2;
         this.town = town;
         this.postCode = postCode;
-		this.creditCard = creditCard;
+	this.country = country;
 	}
 
     public String getStreet1() {
@@ -69,12 +70,13 @@ public class Customer extends User{
         this.postCode = postCode;
     }
 
-    public String getCreditCard() {
-        return creditCard;
+
+    public String getCountry() {
+        return country;
     }
 
-    public void setCreditCard(String creditCard) {
-        this.creditCard = creditCard;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public Basket getBasket() {
