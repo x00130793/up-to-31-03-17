@@ -1,0 +1,4 @@
+[0m[[31merror[0m] [0m/home/wdd/Desktop/project/up-to-31-03-17/app/views/login.scala.html:50: Expected '}' but found '@'[0m
+[0m[[31merror[0m] [0m						<h4>Password should have at least 8 characters, one capital letter, one small letter, number and a special character like "!?@" etc...</h4>[0m
+[0m[[31merror[0m] [0m						                                                                                                                             ^[0m
+[0m[[31merror[0m] [0m(compile:[31mtwirlCompileTemplates[0m) Twirl compilation failed[0m

@@ -110,7 +110,7 @@ public class HomeController extends Controller {
     private final Pattern hasUppercase = Pattern.compile("[A-Z]");
     private final Pattern hasLowercase = Pattern.compile("[a-z]");
     private final Pattern hasNumber = Pattern.compile("\\d");
-    private final Pattern hasSpecialChar = Pattern.compile("[^a-zA-Z0-9 ]");
+    
     private final Pattern hasAt = Pattern.compile("[@]");
 
     public Result addUserSubmit(Long cat, String filter){
@@ -139,7 +139,9 @@ public class HomeController extends Controller {
             flash("fail", "Password does not have uppercase");
         }
 
-
+        if(!hasUppercase.matcher(u.getPassword()).find() || !hasUppercase.matcher(u.getPassword2()).find()){
+            flash("fail", "Password does not have uppercase");
+        }
 
         if(!hasLowercase.matcher(u.getPassword()).find() || !hasLowercase.matcher(u.getPassword2()).find()){
             flash("fail", "Password does not have lowercase");
@@ -149,15 +151,13 @@ public class HomeController extends Controller {
             flash("fail", "Password does not have a number");
         }
 
-        if(!hasSpecialChar.matcher(u.getPassword()).find() || !hasSpecialChar.matcher(u.getPassword2()).find()){
-            flash("fail", "Password does not have a special character i.e. !,@,#, etc.");
-        }
+        
 
         if(!hasAt.matcher(u.getEmail()).find()){
             flash("fail", "Email needs an '@' ");
         }
 
-        else if (u.getPassword().equals(u.getPassword2()) && ((u.getPassword().length() < 8) && (u.getPassword2().length() < 8))){
+        else if ((u.getPassword().equals(u.getPassword2()) && ((u.getPassword().length() >= 8)) && (u.getPassword2().length() >= 8))){
             flash("success", "User " + u.getEmail() + " has been registered.");
             u.save();
         }

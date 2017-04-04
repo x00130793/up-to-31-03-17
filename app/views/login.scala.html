@@ -47,6 +47,15 @@
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User? Signup!</h2>
+						<h4>Password must have: </h4>
+						<ul>
+							<li>At least 8 characters</li>
+							<li>One uppercase letter</li>
+							<li>One lowercase letter</li>
+							<li>A number</li>
+							
+						</ul>
+
 
 						@if(flash.containsKey("success")){
 							<div class="alert alert-success">

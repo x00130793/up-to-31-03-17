@@ -77,55 +77,64 @@ Seq[Any](format.raw/*1.167*/("""
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User? Signup!</h2>
+						<h4>Password must have: </h4>
+						<ul>
+							<li>At least 8 characters</li>
+							<li>One uppercase letter</li>
+							<li>One lowercase letter</li>
+							<li>A number</li>
+							
+						</ul>
 
-						"""),_display_(/*51.8*/if(flash.containsKey("success"))/*51.40*/{_display_(Seq[Any](format.raw/*51.41*/("""
-							"""),format.raw/*52.8*/("""<div class="alert alert-success">
-							"""),_display_(/*53.9*/flash/*53.14*/.get("success")),format.raw/*53.29*/("""
-							"""),format.raw/*54.8*/("""</div>
-						""")))}),format.raw/*55.8*/("""
-						"""),_display_(/*56.8*/if(flash.containsKey("fail"))/*56.37*/{_display_(Seq[Any](format.raw/*56.38*/("""
-							"""),format.raw/*57.8*/("""<div class="alert alert-danger">
-							"""),_display_(/*58.9*/flash/*58.14*/.get("fail")),format.raw/*58.26*/("""
-							"""),format.raw/*59.8*/("""</div>
-						""")))}),format.raw/*60.8*/("""
-					"""),format.raw/*61.6*/("""</div>
-					"""),_display_(/*62.7*/form(action = routes.HomeController.addUserSubmit(catId, filter), 'class -> "form-horizontal", 'role->"form")/*62.116*/ {_display_(Seq[Any](format.raw/*62.118*/("""
 
-						"""),format.raw/*64.7*/("""<div class="form-row">
+						"""),_display_(/*60.8*/if(flash.containsKey("success"))/*60.40*/{_display_(Seq[Any](format.raw/*60.41*/("""
+							"""),format.raw/*61.8*/("""<div class="alert alert-success">
+							"""),_display_(/*62.9*/flash/*62.14*/.get("success")),format.raw/*62.29*/("""
+							"""),format.raw/*63.8*/("""</div>
+						""")))}),format.raw/*64.8*/("""
+						"""),_display_(/*65.8*/if(flash.containsKey("fail"))/*65.37*/{_display_(Seq[Any](format.raw/*65.38*/("""
+							"""),format.raw/*66.8*/("""<div class="alert alert-danger">
+							"""),_display_(/*67.9*/flash/*67.14*/.get("fail")),format.raw/*67.26*/("""
+							"""),format.raw/*68.8*/("""</div>
+						""")))}),format.raw/*69.8*/("""
+					"""),format.raw/*70.6*/("""</div>
+					"""),_display_(/*71.7*/form(action = routes.HomeController.addUserSubmit(catId, filter), 'class -> "form-horizontal", 'role->"form")/*71.116*/ {_display_(Seq[Any](format.raw/*71.118*/("""
+
+						"""),format.raw/*73.7*/("""<div class="form-row">
 							<label>
-							"""),_display_(/*66.9*/inputText(addUserForm("fName"), '_label -> "Fisrt Name",'class -> "form-control ")),format.raw/*66.91*/("""
-							"""),format.raw/*67.8*/("""</label>
+							"""),_display_(/*75.9*/inputText(addUserForm("fName"), '_label -> "Fisrt Name",'class -> "form-control ")),format.raw/*75.91*/("""
+							"""),format.raw/*76.8*/("""</label>
 						</div>
 
 						<div class="form-row">
 							<label>
-							"""),_display_(/*72.9*/inputText(addUserForm("lName"), '_label -> "Second Name",'class -> "form-control")),format.raw/*72.91*/("""
-							"""),format.raw/*73.8*/("""</label>
+							"""),_display_(/*81.9*/inputText(addUserForm("lName"), '_label -> "Second Name",'class -> "form-control")),format.raw/*81.91*/("""
+							"""),format.raw/*82.8*/("""</label>
 						</div>
 
 						<div class="form-row">
 							<label>
-							"""),_display_(/*78.9*/inputText(addUserForm("email"), '_label -> "E-mail",'class -> "form-control")),format.raw/*78.86*/("""
-							"""),format.raw/*79.8*/("""</label>
+							"""),_display_(/*87.9*/inputText(addUserForm("email"), '_label -> "E-mail",'class -> "form-control")),format.raw/*87.86*/("""
+							"""),format.raw/*88.8*/("""</label>
 						</div>
 
 						<div class="form-row">
 							<label>
-							"""),_display_(/*84.9*/inputText(addUserForm("password"), '_label -> "Password",'class -> "form-control", 'type -> "password")),format.raw/*84.112*/("""
-							"""),format.raw/*85.8*/("""</label>
+							"""),_display_(/*93.9*/inputText(addUserForm("password"), '_label -> "Password",'class -> "form-control", 'type -> "password")),format.raw/*93.112*/("""
+							"""),format.raw/*94.8*/("""</label>
 						</div>
 					
 						<div class="form-row">
 							<label>
-							"""),_display_(/*90.9*/inputText(addUserForm("password2"), '_label -> "Repeat Password",'class -> "form-control", 'type -> "password")),format.raw/*90.120*/("""
-							"""),format.raw/*91.8*/("""</label>
+							"""),_display_(/*99.9*/inputText(addUserForm("password2"), '_label -> "Repeat Password",'class -> "form-control", 'type -> "password")),format.raw/*99.120*/("""
+							"""),format.raw/*100.8*/("""</label>
 						</div>
 
 
 
 						<div class="actions">
 							<input type="submit" value="Save" class="btn btn-primary">
-							<a href=""""),_display_(/*98.18*/routes/*98.24*/.LoginController.login(catId, filter)),format.raw/*98.61*/("""">
+							<a href=""""),_display_(/*107.18*/routes/*107.24*/.LoginController.login(catId, filter)),format.raw/*107.61*/("""">
 							</a>
 						</div>
 
@@ -137,8 +146,8 @@ Seq[Any](format.raw/*1.167*/("""
 		</div>
 	</section><!--/form-->
 
-""")))}),format.raw/*110.2*/("""
-""")))}),format.raw/*111.2*/("""
+""")))}),format.raw/*119.2*/("""
+""")))}),format.raw/*120.2*/("""
 """))
       }
     }
@@ -159,11 +168,11 @@ Seq[Any](format.raw/*1.167*/("""
 object login extends login_Scope0.login
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 31 18:01:40 IST 2017
-                  SOURCE: /home/wdd/Desktop/fix3/dsad/app/views/login.scala.html
-                  HASH: 973d2d46fde42bc3456e6ceb26d7f94346866935
-                  MATRIX: 839->1|1115->166|1142->184|1170->257|1197->259|1251->305|1290->307|1319->310|1557->522|1595->551|1635->553|1682->572|1759->622|1777->631|1818->651|1862->667|1904->679|1938->687|1977->717|2017->719|2056->730|2128->775|2142->780|2184->801|2223->812|2267->826|2310->842|2368->874|2383->880|2469->957|2509->959|2546->969|2607->1003|2732->1106|2768->1115|2844->1164|2979->1277|3015->1286|3057->1310|3094->1364|3131->1394|3167->1413|3203->1501|3238->1509|3369->1610|3408->1622|3654->1842|3695->1874|3734->1875|3769->1883|3837->1925|3851->1930|3887->1945|3922->1953|3966->1967|4000->1975|4038->2004|4077->2005|4112->2013|4179->2054|4193->2059|4226->2071|4261->2079|4305->2093|4338->2099|4377->2112|4496->2221|4537->2223|4572->2231|4644->2277|4747->2359|4782->2367|4883->2442|4986->2524|5021->2532|5122->2607|5220->2684|5255->2692|5356->2767|5481->2870|5516->2878|5622->2958|5755->3069|5790->3077|5953->3213|5968->3219|6026->3256|6187->3386|6220->3388
-                  LINES: 27->1|32->1|33->3|34->4|35->5|35->5|35->5|37->7|43->13|43->13|43->13|44->14|45->15|45->15|45->15|46->16|47->17|48->18|48->18|48->18|49->19|50->20|50->20|50->20|51->21|52->22|55->25|56->26|56->26|56->26|56->26|58->28|59->29|59->29|60->30|62->32|62->32|63->33|64->34|65->35|66->36|67->37|68->38|69->39|70->40|72->42|81->51|81->51|81->51|82->52|83->53|83->53|83->53|84->54|85->55|86->56|86->56|86->56|87->57|88->58|88->58|88->58|89->59|90->60|91->61|92->62|92->62|92->62|94->64|96->66|96->66|97->67|102->72|102->72|103->73|108->78|108->78|109->79|114->84|114->84|115->85|120->90|120->90|121->91|128->98|128->98|128->98|140->110|141->111
+                  DATE: Tue Apr 04 14:02:14 IST 2017
+                  SOURCE: /home/wdd/Desktop/project/up-to-31-03-17/app/views/login.scala.html
+                  HASH: 0e409885ac66aba851cb3d2057703e50be317120
+                  MATRIX: 839->1|1115->166|1142->184|1170->257|1197->259|1251->305|1290->307|1319->310|1557->522|1595->551|1635->553|1682->572|1759->622|1777->631|1818->651|1862->667|1904->679|1938->687|1977->717|2017->719|2056->730|2128->775|2142->780|2184->801|2223->812|2267->826|2310->842|2368->874|2383->880|2469->957|2509->959|2546->969|2607->1003|2732->1106|2768->1115|2844->1164|2979->1277|3015->1286|3057->1310|3094->1364|3131->1394|3167->1413|3203->1501|3238->1509|3369->1610|3408->1622|3859->2047|3900->2079|3939->2080|3974->2088|4042->2130|4056->2135|4092->2150|4127->2158|4171->2172|4205->2180|4243->2209|4282->2210|4317->2218|4384->2259|4398->2264|4431->2276|4466->2284|4510->2298|4543->2304|4582->2317|4701->2426|4742->2428|4777->2436|4849->2482|4952->2564|4987->2572|5088->2647|5191->2729|5226->2737|5327->2812|5425->2889|5460->2897|5561->2972|5686->3075|5721->3083|5827->3163|5960->3274|5996->3282|6160->3418|6176->3424|6235->3461|6396->3591|6429->3593
+                  LINES: 27->1|32->1|33->3|34->4|35->5|35->5|35->5|37->7|43->13|43->13|43->13|44->14|45->15|45->15|45->15|46->16|47->17|48->18|48->18|48->18|49->19|50->20|50->20|50->20|51->21|52->22|55->25|56->26|56->26|56->26|56->26|58->28|59->29|59->29|60->30|62->32|62->32|63->33|64->34|65->35|66->36|67->37|68->38|69->39|70->40|72->42|90->60|90->60|90->60|91->61|92->62|92->62|92->62|93->63|94->64|95->65|95->65|95->65|96->66|97->67|97->67|97->67|98->68|99->69|100->70|101->71|101->71|101->71|103->73|105->75|105->75|106->76|111->81|111->81|112->82|117->87|117->87|118->88|123->93|123->93|124->94|129->99|129->99|130->100|137->107|137->107|137->107|149->119|150->120
                   -- GENERATED --
               */
           

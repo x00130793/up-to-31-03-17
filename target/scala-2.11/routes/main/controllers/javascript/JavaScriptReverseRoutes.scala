@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/Desktop/fix3/dsad/conf/routes
-// @DATE:Fri Mar 31 18:01:40 IST 2017
+// @SOURCE:/home/wdd/Desktop/project/up-to-31-03-17/conf/routes
+// @DATE:Tue Apr 04 13:44:18 IST 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
